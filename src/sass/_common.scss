@@ -1,0 +1,33 @@
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 31px 0 31px;
+
+  @media screen and (min-width: $mobile) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    padding: 0 39px 0 39px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1200px;
+    padding: 0 15px 0 15px;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}

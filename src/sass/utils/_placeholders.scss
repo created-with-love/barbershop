@@ -1,0 +1,105 @@
+%centeringVar {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+}
+
+%main-font {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+%button {
+  outline: none;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $white;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+// серая черточка перед текстом. Что бы выровнять её по центру нужно указать родителю display: flex + justify-content-center или добавить других правил
+%line-before-with-opacity {
+  content: '';
+  display: inline-flex;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+
+  background: rgba(157, 164, 189, 0.6);
+}
+
+// Черная черточка перед текстом
+%line-before-black {
+  content: '';
+  display: inline-flex;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+
+  background: $heading-text-color;
+}
+
+%line-before-white {
+  content: '';
+  display: inline-flex;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+
+  background: $white;
+}
+
+%container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 31px;
+  padding-right: 31px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-left: 39px;
+    padding-right: 39px;
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: $desktop - 80px;
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+}
