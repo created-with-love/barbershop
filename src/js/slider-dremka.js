@@ -1,11 +1,11 @@
 // (() => {
-  const refs = {
+const refs = {
+    
     list: document.querySelector('[data-id="list"]'),
     items: document.querySelectorAll('[data-item]'),
+    radioBtns: document.querySelectorAll('[type="radio"]'),
     prevBtn: document.querySelector('[data-btn-prev]'),
     nextBtn: document.querySelector('[data-btn-next]'),
-    radioBtns: document.querySelectorAll('[type="radio"]'),
-    radioList: document.querySelector('[data-radio-list]'),
   };
 
   const getElByAtr = (listRefs, atr) =>

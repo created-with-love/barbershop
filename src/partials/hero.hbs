@@ -12,7 +12,7 @@
       <div class="hero-section__bg-shadow"></div>
       <div class="hero-section__bg-img">
         <ul class="hero-img-list" data-id="list">
-          <li data-item data-active>
+          <li data-item data-active class="slide-1">
             <picture class="bg-img__third">
               <source srcset="
                   images/hero/hero-desctop3.jpg  1125w,
@@ -33,7 +33,7 @@
                 sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 480px" />
             </picture>
           </li>
-          <li data-item>
+          <li data-item class="slide-2">
             <picture class="bg-img__second">
               <source srcset="
                   images/hero/hero-desctop2.jpg    1125w,
@@ -55,7 +55,7 @@
                 sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 480px" />
             </picture>
           </li>
-          <li data-item>
+          <li data-item class="slide-3">
             <picture class="bg-img__first">
               <source srcset="
                   images/hero/hero-desctop1.jpg    1125w,
@@ -95,16 +95,18 @@
         <div class="slider-lines__form" role="group">
           <label class="slider-lines__label" for="first-slider-btn">
             <input type="radio" name="slider-img" value="slider-image1"
-              class="slider-lines__form-item slider-lines__first-slide" id="first-slider-btn" checked />
+              class="slider-lines__form-item slider-lines__first-slide" id="first-slider-btn" checked
+              data-slider-btn="first" />
             <span class="slider-lines-icon"></span></label>
           <label class="slider-lines__label" for="second-slider-btn">
             <input type="radio" name="slider-img" value="slider-image2"
-              class="slider-lines__form-item slider-lines__second-slide" id="second-slider-btn" />
+              class="slider-lines__form-item slider-lines__second-slide" id="second-slider-btn"
+              data-slider-btn="second" />
             <span class="slider-lines-icon"></span>
           </label>
           <label class="slider-lines__label" for="third-slider-btn">
             <input type="radio" name="slider-img" value="slider-image3"
-              class="slider-lines__form-item slider-lines__third-slide" id="third-slider-btn" />
+              class="slider-lines__form-item slider-lines__third-slide" id="third-slider-btn" data-slider-btn="third" />
             <span class="slider-lines-icon"></span>
           </label>
         </div>
