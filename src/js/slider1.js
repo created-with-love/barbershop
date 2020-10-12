@@ -9,7 +9,7 @@ const refs = {
   };
 
   const getElByAtr = (listRefs, atr) =>
-    [...listRefs].find(el => el.getAttribute(atr) === '');
+  [...listRefs].find(el => el.getAttribute(atr) === "");
 
   const slider = {
     intervalId: null,
