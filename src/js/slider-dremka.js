@@ -1,4 +1,4 @@
-(() => {
+// (() => {
   const refs = {
     list: document.querySelector('[data-id="list"]'),
     items: document.querySelectorAll('[data-item]'),
@@ -79,4 +79,4 @@
     slider.start();
   });
   // listner for run slider -END
-})();
+// })();
