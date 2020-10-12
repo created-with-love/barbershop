@@ -29,3 +29,4 @@ document.body.insertAdjacentHTML('beforeend', advantagesMarkup);
 document.body.insertAdjacentHTML('beforeend', teamMarkup);
 document.body.insertAdjacentHTML('beforeend', beardMarkup);
 document.body.insertAdjacentHTML('beforeend', footerMarkup);
+
