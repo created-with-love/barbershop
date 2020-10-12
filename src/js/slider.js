@@ -89,7 +89,6 @@ activeSlide.classList.replace('active-slide', 'hidden');
 
 
 // установка первого слайда открытым
-
 const sliderBtnsList = document.querySelector('.hero-section__buttons');
 const sliderRadioList = document.querySelector('.slider-lines__form');
 
