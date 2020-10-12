@@ -9,7 +9,7 @@ const refs = {
   };
 
   const getElByAtr = (listRefs, atr) =>
-  [...listRefs].find(el => el.getAttribute(atr) === "");
+  [...listRefs].find(el => el.hasAttribute(atr) == false);
 
   const slider = {
     intervalId: null,
@@ -36,7 +36,7 @@ const refs = {
     displayActiveItem() {
       refs.items[this.activeIndex].setAttribute('data-active', '');
       [...refs.items]
-        .filter(el => !el.getAttribute('data-active'))
+        .filter(el => !el.hasAttribute('data-active'))
         .map(el => el.setAttribute('style', 'display: none'));
 
       refs.items[this.activeIndex].setAttribute('style', 'display: block');
