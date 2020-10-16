@@ -60,7 +60,7 @@ function onSliderBtnClick(e) {
   const sliderThirdItem = document.querySelector('.slide-3');
   const sliderBtnNext = document.querySelector('[data-btn-next]');
   const sliderBtnPrev = document.querySelector('[data-btn-prev]');
-  const activeSlide = document.querySelector('active-slide');
+  const activeSlide = document.querySelector('.active-slide');
   const firstRadioBtn = document.querySelector('#first-slider-btn');
   const secondRadioBtn = document.querySelector('#second-slider-btn');
   const thirdRadioBtn = document.querySelector('#third-slider-btn');
