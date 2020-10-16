@@ -1,27 +1,17 @@
+export function onSideSliderNavClick(e) {
   const sliderFirstItem = document.querySelector('.slide-1');
   const sliderSecondItem = document.querySelector('.slide-2');
   const sliderThirdItem = document.querySelector('.slide-3');
   const sliderBtnNext = document.querySelector('[data-btn-next]');
   const sliderBtnPrev = document.querySelector('[data-btn-prev]');
-  const activeSlide = document.querySelector('active-slide');
   const sliderItems = document.querySelectorAll('[data-item]');
-    
-  const firstRadioBtn = document.querySelector('#first-slider-btn');
-  const secondRadioBtn = document.querySelector('#second-slider-btn');
-  const thirdRadioBtn = document.querySelector('#third-slider-btn');
-    
-  const nexActiveSlide =activeSlide.nextElementSibling;
-  const preActiveSlide =activeSlide.previousElementSibling;
-
-
-function onSideSliderNavClick(e) {
-
+   
   if (e.target.nodeName !== 'INPUT') return;
 
   sliderItems.forEach(item => {
     item.classList.replace('active-slide', 'hidden');
   });
-
+ 
   switch (e.target.dataset.sliderBtn) {
     case 'first':
       sliderFirstItem.classList.replace('hidden', 'active-slide');
@@ -45,8 +35,21 @@ function onSideSliderNavClick(e) {
 }
 
 
-function onSliderBtnClick(e) {
-  if (e.target.nodeName !== 'BUTTON') return;
+export function onSliderBtnClick(e) {
+  if (e.target.nodeName !== 'INPUT') return;
+
+
+  const sliderFirstItem = document.querySelector('.slide-1');
+  const sliderSecondItem = document.querySelector('.slide-2');
+  const sliderThirdItem = document.querySelector('.slide-3');
+  const sliderBtnNext = document.querySelector('[data-btn-next]');
+  const sliderBtnPrev = document.querySelector('[data-btn-prev]');
+  const activeSlide = document.querySelector('active-slide');
+  const firstRadioBtn = document.querySelector('#first-slider-btn');
+  const secondRadioBtn = document.querySelector('#second-slider-btn');
+  const thirdRadioBtn = document.querySelector('#third-slider-btn');
+  const nexActiveSlide =activeSlide.nextElementSibling;
+  const preActiveSlide =activeSlide.previousElementSibling;
 
   if (e.target === sliderBtnNext) {
     if (sliderFirstItem ===activeSlide) {
@@ -63,7 +66,7 @@ function onSliderBtnClick(e) {
 
     if (sliderThirdItem ===activeSlide) return;
 
-activeSlide.classList.replace('active-slide', 'hidden');
+    activeSlide.classList.replace('active-slide', 'hidden');
     nexActiveSlide.classList.replace('hidden', 'active-slide');
   }
 
@@ -82,13 +85,14 @@ activeSlide.classList.replace('active-slide', 'hidden');
       secondRadioBtn.checked = true;
     }
 
-activeSlide.classList.replace('active-slide', 'hidden');
+    activeSlide.classList.replace('active-slide', 'hidden');
     preActiveSlide.classList.replace('hidden', 'active-slide');
   }
 }
 
 
 // установка первого слайда открытым
+const sliderFirstItem = document.querySelector('.slide-1');
 const sliderBtnsList = document.querySelector('.hero-section__buttons');
 const sliderRadioList = document.querySelector('.slider-lines__form');
 
@@ -99,4 +103,4 @@ document.querySelector('#first-slider-btn').checked = true;
 sliderRadioList.addEventListener('click', onSideSliderNavClick);
 
 // слайдер - переключение кнопками назад и вперед 
-sliderBtnsList.addEventListener('click', onSliderBtnClick);
+  sliderBtnsList.addEventListener('click', onSliderBtnClick);
