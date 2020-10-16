@@ -40,14 +40,11 @@
 // .bg-img__second,
 // .bg-img__first,
 .hero-switch-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
   @media screen and (max-width: 479px) {
     height: 580px;
   }
   object-fit: cover;
-}
-
-.active-slide {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
