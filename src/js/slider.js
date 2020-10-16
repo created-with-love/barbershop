@@ -36,7 +36,7 @@ export function onSideSliderNavClick(e) {
 
 
 export function onSliderBtnClick(e) {
-  if (e.target.nodeName !== 'INPUT') return;
+  if (e.target.nodeName !== 'BUTTON') return;
 
 
   const sliderFirstItem = document.querySelector('.slide-1');
