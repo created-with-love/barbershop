@@ -6,7 +6,7 @@ export function onSideSliderNavClick(e) {
   const sliderBtnPrev = document.querySelector('[data-btn-prev]');
   const sliderItems = document.querySelectorAll('[data-item]');
    
-  if (e.target.nodeName !== 'INPUT') return;
+  if (e.target.nodeName !== 'BUTTON') return;
 
   sliderItems.forEach(item => {
     item.classList.replace('active-slide', 'hidden');
