@@ -1,15 +1,15 @@
-// (() => {
-const refs = {
-    
+(() => {
+  const refs = {
     list: document.querySelector('[data-id="list"]'),
     items: document.querySelectorAll('[data-item]'),
-    radioBtns: document.querySelectorAll('[type="radio"]'),
     prevBtn: document.querySelector('[data-btn-prev]'),
     nextBtn: document.querySelector('[data-btn-next]'),
+    radioBtns: document.querySelectorAll('[type="radio"]'),
+    radioList: document.querySelector('[data-radio-list]'),
   };
 
   const getElByAtr = (listRefs, atr) =>
-    [...listRefs].find(el => el.hasAttribute(atr) == false);
+    [...listRefs].find(el => el.getAttribute(atr) === '');
 
   const slider = {
     intervalId: null,
@@ -36,10 +36,7 @@ const refs = {
     displayActiveItem() {
       refs.items[this.activeIndex].setAttribute('data-active', '');
       [...refs.items]
-        .filter(el => {
-          console.log(el)
-          !el.hasAttribute('data-active');
-        })
+        .filter(el => !el.getAttribute('data-active'))
         .map(el => el.setAttribute('style', 'display: none'));
 
       refs.items[this.activeIndex].setAttribute('style', 'display: block');
@@ -82,4 +79,4 @@ const refs = {
     slider.start();
   });
   // listner for run slider -END
-// })();
+})();
