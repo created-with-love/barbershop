@@ -48,7 +48,7 @@ export function onSliderBtnClick(e) {
   const firstRadioBtn = document.querySelector('#first-slider-btn');
   const secondRadioBtn = document.querySelector('#second-slider-btn');
   const thirdRadioBtn = document.querySelector('#third-slider-btn');
-  const nexActiveSlide =activeSlide.nextElementSibling;
+  const nextActiveSlide =activeSlide.nextElementSibling;
   const preActiveSlide =activeSlide.previousElementSibling;
 
   if (e.target === sliderBtnNext) {
@@ -67,7 +67,7 @@ export function onSliderBtnClick(e) {
     if (sliderThirdItem ===activeSlide) return;
 
     activeSlide.classList.replace('active-slide', 'hidden');
-    nexActiveSlide.classList.replace('hidden', 'active-slide');
+    nextActiveSlide.classList.replace('hidden', 'active-slide');
   }
 
   if (e.target === sliderBtnPrev) {
