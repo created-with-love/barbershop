@@ -1,4 +1,20 @@
-export function onSideSliderNavClick(e) {
+// установка первого слайда открытым
+const sliderFirstItem = document.querySelector('.slide-1');
+const sliderBtnsList = document.querySelector('.hero-section__buttons');
+const sliderRadioList = document.querySelector('.slider-lines__form');
+
+sliderFirstItem.classList.replace('hidden', 'active-slide');
+document.querySelector('#first-slider-btn').checked = true;
+
+// слайдер - переключение через радио-кнопки
+sliderRadioList.addEventListener('click', onSideSliderNavClick);
+
+// слайдер - переключение кнопками назад и вперед 
+sliderBtnsList.addEventListener('click', onSliderBtnClick);
+
+
+
+function onSideSliderNavClick(e) {
   const sliderFirstItem = document.querySelector('.slide-1');
   const sliderSecondItem = document.querySelector('.slide-2');
   const sliderThirdItem = document.querySelector('.slide-3');
@@ -35,7 +51,7 @@ export function onSideSliderNavClick(e) {
 }
 
 
-export function onSliderBtnClick(e) {
+function onSliderBtnClick(e) {
   if (e.target.nodeName !== 'BUTTON') return;
 
 
